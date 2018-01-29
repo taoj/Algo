@@ -21,16 +21,16 @@ public class DFS extends Graph implements Starter {
 
 	@SuppressWarnings("unchecked")
 	public void init(int num) {
-		n = num;
-		adj = new LinkedList[n];
+		v = num;
+		adj = new LinkedList[v];
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < v; i++) {
 			adj[i] = new LinkedList<>();
 		}
 	}
 
 	public void dfs(int start) {
-		boolean[] visited = new boolean[n];
+		boolean[] visited = new boolean[v];
 
 		visited[start] = true;
 
