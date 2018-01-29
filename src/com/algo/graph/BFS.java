@@ -4,6 +4,16 @@ import com.algo.Starter;
 
 import java.util.LinkedList;
 
+/**
+ * 图的bfs和树的bfs很类似，要注意的是图中可能有循环cycle。所以要有一个visit来记录某个节点是否已经被访问过。
+ *
+ * 如果图不是联通的 connected， 要做的就是对每个节点vertex 进行bfs
+ *
+ * 时间复杂度为 O（v+E）
+ *
+ * 空间复杂度为 O（v）
+ */
+
 public class BFS extends Graph implements Starter{
 
     public BFS(){

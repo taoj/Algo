@@ -1,13 +1,13 @@
 package com.algo;
 
-import com.algo.graph.BFS;
+import com.algo.graph.DFS;
 
 public class Main {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Starter starter = new BFS();
+		Starter starter = new DFS();
 
-        starter.run();
-    }
+		starter.run();
+	}
 }
