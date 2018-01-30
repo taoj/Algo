@@ -1,12 +1,12 @@
 package com.algo;
 
-import com.algo.graph.DFS;
+import com.algo.sort.HeapSort;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Starter starter = new DFS();
+		Starter starter = new HeapSort();
 
 		starter.run();
 	}
