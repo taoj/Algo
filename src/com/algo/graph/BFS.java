@@ -14,23 +14,25 @@ import com.algo.Starter;
  * 空间复杂度为 O（v）
  */
 
-public class BFS extends Graph implements Starter {
+public class BFS implements Starter {
+
+	private Graph graph;
 
 	public BFS() {
 	}
 
-	public void init(int num) {
-		v = num;
-		adj = new LinkedList[v];
-
-		for (int i = 0; i < v; i++) {
-			adj[i] = new LinkedList<>();
-		}
-	}
+	// public void init(int num) {
+	// v = num;
+	// adj = new LinkedList[v];
+	//
+	// for (int i = 0; i < v; i++) {
+	// adj[i] = new LinkedList<>();
+	// }
+	// }
 
 	public void bfs(int first) {
 
-		boolean[] visit = new boolean[v];
+		boolean[] visit = new boolean[graph.v];
 		LinkedList<Integer> queue = new LinkedList<>();
 
 		// 初始状态
@@ -41,7 +43,7 @@ public class BFS extends Graph implements Starter {
 			int cur = queue.poll();
 			System.out.println("process node " + cur);
 
-			for (int next : adj[cur]) {
+			for (int next : graph.adj[cur]) {
 				if (!visit[next]) {
 					visit[next] = true;
 					queue.offer(next);
@@ -53,13 +55,13 @@ public class BFS extends Graph implements Starter {
 
 	@Override
 	public void run() {
-		init(4);
-		addEdge(0, 1);
-		addEdge(0, 2);
-		addEdge(1, 2);
-		addEdge(2, 0);
-		addEdge(2, 3);
-		addEdge(3, 3);
+		graph = new Graph(4);
+		graph.addEdge(0, 1);
+		graph.addEdge(0, 2);
+		graph.addEdge(1, 2);
+		graph.addEdge(2, 0);
+		graph.addEdge(2, 3);
+		graph.addEdge(3, 3);
 
 		bfs(2);
 	}
