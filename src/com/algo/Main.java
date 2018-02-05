@@ -1,12 +1,12 @@
 package com.algo;
 
-import com.algo.graph.cycle.DisjointSetCycleDetection;
+import com.algo.graph.Prim;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Starter starter = new DisjointSetCycleDetection();
+		Starter starter = new Prim();
 
 		starter.run();
 	}
