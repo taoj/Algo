@@ -1,12 +1,12 @@
 package com.algo;
 
-import com.algo.graph.Prim;
+import com.algo.graph.Dijkstra;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Starter starter = new Prim();
+		Starter starter = new Dijkstra();
 
 		starter.run();
 	}
